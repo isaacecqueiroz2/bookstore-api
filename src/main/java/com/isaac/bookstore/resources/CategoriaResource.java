@@ -18,10 +18,11 @@ public class CategoriaResource {
 	private CategoriaService service;
 	
 	@GetMapping(value = "/{id}")
+	//localhost:8080/categorias
 	public ResponseEntity<Categoria> findById(@PathVariable Integer id) {
 		Categoria cat = service.findById(id);
 		return ResponseEntity.ok().body(cat);
 	}
 }
 
-//localhost:8080/categorias
+
